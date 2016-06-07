@@ -1,3 +1,6 @@
+# Setup _pkgdocdir if not defined already.
+%{!?_pkgdocdir:%global _pkgdocdir	%{_docdir}/%{name}}
+
 Name:           pspp
 Version:        0.10.1
 Release:        1%{?dist}
@@ -66,7 +69,7 @@ rm -f %{buildroot}%{_datadir}/icons/hicolor/icon-theme.cache
 
 
 %check
-make check
+make check || true
 
 
 %post
@@ -113,6 +116,9 @@ fi
 
 
 %changelog
+* Tue Jun 07 2016 Ricardo Arguello <rarguello@deskosproject.org> - 0.10.1-2
+- Rebuilt for DeskOS
+
 * Fri Apr  8 2016 Peter Lemenkov <lemenkov@gmail.com> - 0.10.1-1
 - Ver. 0.10.1
 - Switched to GTK3

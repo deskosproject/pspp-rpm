@@ -1,0 +1,6 @@
+= DeskOS: pspp RPM
+
+This is the _pspp_ RPM package for the *DeskOS* operating system.
+
+Upstream comes from Fedora 24:
+http://koji.fedoraproject.org/koji/buildinfo?buildID=752425
